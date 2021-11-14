@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    </head>
+    <body>
+        <div class="header">
+            <h1 >Book List</h1>
+        </div>
+        <div class="content">
+        {% for object in object_list %}    
+        <h3>{{object.company_name_clean}}</h3>
+        <span>{{object.company_name_raw}}</span>
+<span>{{object.company_loc_raw}}</span>
+<span>{{object.company_biz_phone}}</span>
+<span>{{object.company_biz_email}}</span>
+<span>{{object.company_street_name}}</span>
+<span>{{object.company_postal_code}}</span>
+
+           
+        {% endfor %}
+        </div>
+    </body>
+</html>
